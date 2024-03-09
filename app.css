@@ -1,0 +1,161 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20201107/pngtree-green-cartoon-strawberry-flower-fruit-material-image_465641.jpg") ;
+}
+
+
+.wrapper{
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #530530;
+
+}
+
+
+.game-details{
+    color: #fadcff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.play-board {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food{
+    background-color: red;
+}
+
+
+.play-board .head{
+    background-color: rgb(245, 173, 245);
+}
+ 
+.hide{
+    visibility: hidden;
+}
+
+
+.gameOverScreen{
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    background: black;
+    position: absolute;
+    border: 5px solid #530530;
+
+}
+
+.gameOverScreen span{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+}
+
+.gameOverScreen button{
+    width: 20%;
+    padding: 1rem;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-bottom: 30%;
+    border: none;
+    background-color: rgb(245, 173, 245) ;
+    border-radius: 5px;
+    color: white;
+}
+
+
+@media screen and (max-width: 450px) {
+    .gameOverScreen button{
+        width: 30%;
+        margin-left: 35%;
+    }
+}
+
+.controls {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    border-radius: 50%;
+ 
+}
+
+
+@media screen and (max-width: 600px){
+    .wrapper {
+        width: 98vmin;
+        height: 130vmin;
+    }
+
+    .game-details {
+        
+        font-size: .8rem;
+        padding: 20px 27px;
+    }  
+    .controls{
+        display: flex;
+    }
+    .controls i {
+        padding: 15px 0;
+        font-size: 0.1rem;
+    }
+}
+
+.strawberry{
+    font-size: 10px;
+}
+
+.controls i{
+    padding: 1px 0;
+    color: pink;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: calc(100% / 4);
+    border: 1px solid black;
+}
+
+.leftright{
+    width: 500px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.up{
+    margin-bottom: 10px;
+}
+
+.down{
+    margin-top: 10px;
+}
